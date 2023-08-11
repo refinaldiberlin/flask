@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Find File From IPFS</title><link rel="icon" href="https://cdn-icons-png.flaticon.com/512/622/622848.png">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+        <style>
+            /* Add a black background color to the top navigation */
+            .topnav {
+                background-color: #333;
+                overflow: hidden;
+            }
+            
+            /* Style the links inside the navigation bar */
+            .topnav a {
+                float: left;
+                color: #f2f2f2;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                font-size: 17px;
+            }
+            
+            /* Change the color of links on hover */
+            .topnav a:hover {
+                background-color: #ddd;
+                color: black;
+            }
+            
+            /* Add a color to the active/current link */
+            .topnav a.active {
+                background-color: #04AA6D;
+                color: white;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="topnav">
+            <!-- <a target="_blank" class="navbar-item" href="https://docs.ipfs.io/concepts/what-is-ipfs/">
+                <img src="https://cdn-icons-png.flaticon.com/512/622/622848.png" width="30" height="40">
+            </a> -->
+            <a class="navbar-item" href="/">Home</a>
+            <!-- <a href="/login" class="navbar-item">Login</a> -->
+            <a href="/keluar" class="navbar-item active">Isi Keterangan</a>
+            <!-- <a target="_blank" href="https://wa.me/+6282155534039/?text=there's a problem..." class="navbar-item">Report an issue</a> -->
+        </div>
+        <!-- <nav class="navbar is-link" role="navigation" aria-label="main navigation">
+            <div class="navbar-brand">
+                <a target="_blank" class="navbar-item" href="https://docs.ipfs.io/concepts/what-is-ipfs/">
+                    <img src="https://cdn-icons-png.flaticon.com/512/622/622848.png" width="30" height="40">
+                </a>
+            
+                <a role="button" class="navbar-burger" aria-label="menu" aria-expanded="false" data-target="navbar1">
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                    <span aria-hidden="true"></span>
+                </a>
+            </div>
+        
+            <div id="navbar1" class="navbar-menu">
+                <div class="navbar-end">
+                    <div class="navbar-item">
+                        <div class="buttons">
+                            <a href="/logout" class="button is-light" onclick="preventback()">Log out</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </nav> -->
+
+        <section class="hero is-small">
+            <div class="hero-body">
+                <p class="title" >Izin Keluar</p>
+                <p class="subtitle">Isi Keterangan</p>
+            </div>
+        </section>
+
+        <div class="container is-max-widescreen">
+            <div class="notification ">
+                <div class="box">
+                    <form class="box" action="/izin-keluar" method = "POST">
+                        <div class="field">
+                            <label class="label">Keterangan</label>
+                            <div class="control">
+                                <input class="input" type="text" name="ket">
+                            </div>
+                        </div>
+                        <button class="button is-primary" type="submit">Kirim</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </body>
+    <script>
+        function preventBack(){window.history.forward();}
+            setTimeout("preventBack()", 0);
+            window.onunload=function(){null};
+    </script>
+</html>
